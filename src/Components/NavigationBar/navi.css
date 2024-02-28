@@ -1,0 +1,356 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    background: #373737;
+}
+/*mainsection styling*/
+.navigationDiv{
+    width: 100%;
+    height: 12%;
+    position: absolute;
+    top: 0;
+}
+#mainsection{
+    width: 95%;
+    height: 75%;
+    position: absolute;
+    left: 2.5%;
+    bottom: 0%;
+    background-color: #000000;
+    border-radius: 10px;
+    z-index: 1000;
+    overflow: hidden;
+    justify-content: center;
+    text-align: center;
+}
+.Logo{
+    width: 10%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    color: #FFFFFF;
+    font-size: 1.2rem;
+}
+.navLinks{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 2%;
+    justify-content: center;
+    text-align: center;
+}
+.navLinks ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.navLinks ul li{
+    list-style: none;
+    margin: 0 2%;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: 'SF Pro Display', sans-serif;
+    color: #878787;
+    cursor: pointer;
+    position: relative;
+}
+.navLinks ul li:hover{
+    color: #FFFFFF;
+
+}
+.navLinks ul li::before {
+    content: "";
+    text-decoration: underline;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0%;
+    left: 0;
+    background-color: #FFFFFF;
+    transition: 0.5s; 
+}
+.navLinks ul li:hover::before{
+    width: 100%;
+}
+#mobilemenuicon{
+    display: none;
+    height: 80%;
+    width: 10%;
+    position: absolute;
+    left: 3%;
+    top: 10%;
+    background-image: url(../Icons/Hamburger.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease;
+}
+/*resposnive styling*/
+/*Mobile large*/
+@media (max-width: 1025px){
+    .Logo{
+        font-size: 1rem;
+    }
+}
+/*tablet Medium*/
+@media (max-width: 769px){
+    .Logo{
+        font-size: 0.9rem;
+        right: 2%;
+    }
+}
+/*Mobile Large*/
+@media (max-width: 426px){
+    #mainsection{
+        width: 100%;
+        left: 0;
+        border-radius: 0;
+    }
+    .Logo{
+        right: 3%;
+        font-size: 0.9rem;
+    }
+    .navLinks{
+        display: none;
+    }
+    #mobilemenuicon{
+        display: block;
+    }
+}
+/*Mobile Medium*/
+@media (max-width: 376px){
+    .Logo{
+        right: 6%;
+    }
+}
+/*Mobile small*/
+@media (max-width: 321px){
+    .Logo{
+        right: 7%;
+    }
+}
+/*Initial webpage*/
+#Home{
+    color: #FFFFFF;
+}
+/*drop down menu styling*/
+#dropdownmenu{
+    width: 95%;
+    height: 0vh;
+    position: absolute;
+    background-color: #000000;
+    left: 2.5%;
+    top: 8%;
+    border-radius: 10px;
+    z-index: 999;
+}
+#mobilemenudrop{
+    width: 100%;
+    height: 0vh;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    background-color: #000000;
+    z-index: 999;
+    overflow: hidden;
+}
+/*mobile drop down links*/
+#Home-mobile , #Phones-mobile , #Audio-mobile , #Watches-mobile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: 'SF Pro Display', sans-serif;
+    color: #878787;
+    cursor: pointer;
+    display: none;
+    transition: all 0.5s ease-in-out;
+}
+#Home-mobile:hover , #Phones-mobile:hover , #Audio-mobile:hover , #Watches-mobile:hover{
+    color: #FFFFFF;
+}
+#Home-mobile{
+    position: fixed;
+    top: 20%;
+    left: 5%;
+}
+#Phones-mobile{
+    position: fixed;
+    top: 30%;
+    left: 5%;
+}
+#Audio-mobile{
+    position: fixed;
+    top: 40%;
+    left: 5%;
+}
+#Watches-mobile{
+    position: fixed;
+    top: 50%;
+    left: 5%;
+}
+/*images on the drop down*/
+.maindivsection{
+    width: 95%;
+    height: 80%;
+    position: absolute;
+    left: 2.5%;
+    top: 13%;
+}
+.cardsection{
+    width: 70%;
+    height: 90%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+#cardone{
+    width: 30%;
+    height: 100%;
+    border-radius: 15%;
+    background-color: #0f0f0f;
+    position: absolute;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#cardtwo{
+    width: 30%;
+    height: 100%;
+    border-radius: 15%;
+    background-color: #0f0f0f;
+    position: absolute;
+    right: 35%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#cardthree{
+    width: 30%;
+    height: 100%;
+    border-radius: 15%;
+    background-color: #0f0f0f;
+    position: absolute;
+    right: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/*text on the drop down*/
+#textsection{
+    width: 26%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    display: none;
+}
+#Type-txt{
+    font-size: 0.9em;
+    font-family: 'SF Pro Display', sans-serif;
+    color: #878787;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+#deviceone,#devicetwo,#devicethree{
+    font-size: 2.5em;
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: bold;
+    color: #d9d9d9;
+}
+#deviceone{
+    position: absolute;
+    top: 25%;
+}
+#devicetwo{
+    position: absolute;
+    top: 45%;
+}
+#devicethree{
+    position: absolute;
+    top: 65%;
+}
+/*responsive for the dropdown*/
+
+/*mobile links content*/
+#mbphoneCont{
+    width: 100%;
+    height: 30%;
+    position: fixed;
+    top: 36%;
+    left: 0;
+    z-index: 900;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    display: none;
+    transition: all 0.5s ease-in-out;
+}
+#mbaudioCont{
+    width: 100%;
+    height: 30%;
+    position: fixed;
+    top: 46%;
+    left: 0;
+    z-index: 900;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    display: none;
+    transition: all 0.5s ease-in-out;
+}
+#mbwatchCont{
+    width: 100%;
+    height: 30%;
+    position: fixed;
+    top: 56%;
+    left: 0;
+    z-index: 900;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    display: none;
+    transition: all 0.5s ease-in-out;
+}
+.line{
+    width: 90%;
+    height: 2px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 0%;
+    left: 5%;
+}
+.mobproductone{
+    position: absolute;
+    left: 5%;
+    top: 5%;
+}
+.mobproducttwo{
+    position: absolute;
+    left: 5%;
+    top: 30%;
+}
+.mobproductthree{
+    position: absolute;
+    left: 5%;
+    top: 55%;
+}
